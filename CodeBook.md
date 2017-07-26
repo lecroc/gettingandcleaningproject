@@ -112,3 +112,7 @@ The names for each feature have been tidied by eliminating any symbols and conve
 "angley,gravitymean"
 "anglez,gravitymean"
 
+Further information on the variables in the source data set can be downloaded here:
+
+http://archive.ics.uci.edu/ml/machine-learning-databases/00240/
+
