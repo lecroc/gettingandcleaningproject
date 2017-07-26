@@ -14,7 +14,7 @@ if(!file.exists(file)){fileURL<-"https://d396qusza40orc.cloudfront.net/getdata%2
 
 download.file(fileURL, destfile = "./Dataset.zip")
 
-unzip("Dataset.zip")} else(print("file already there"))
+unzip("Dataset.zip")} else("file already there")
 
 
 
@@ -69,5 +69,10 @@ alldata$subject<-as.factor(alldata$subject)
 
 alldata$activity<-factor(alldata$activity, levels=activities[,1], labels=activitylabels)
 
+ad1<-alldata %>%
+     group_by(subject, activity) %>%
+     summarise_all(funs(mean))
+
+write.table(ad1, file="./tidydata.txt", row.names=F)
 
 
