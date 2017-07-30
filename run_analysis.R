@@ -29,7 +29,7 @@ featurekeep<-grep(".*mean*|*.std*", featurelabels, ignore.case = T) # create a p
 
 featurelabels<-featurelabels[featurekeep] # subset the featurelabels to only those I want to keep
 
-featurelabels<-gsub('[-()]', '', featurelabels) # remove symbols from feature labels
+featurelabels<-gsub('[-(),]', '', featurelabels) # remove symbols from feature labels
 
 featurelabels<-tolower(featurelabels) # remove uppercase letters from feature labels
 
